@@ -1,0 +1,21 @@
+1. public class Embotelladora {
+// Par´ametros: n´umero de botellas disponibles en el almac´en.
+// peque~nas: n´umero de botellas en almac´en de 1L
+// grandes : n´umero de botellas en almac´en de 5L
+// total : n´umero total de litros que hay que embotellar
+// Devuelve: n´umero de botellas peque~nas necesarias para envasar
+// el total de l´ıquido, teniendo en cuenta que hay que
+// minimizar el n´umero de botellas peque~nas: primero
+// se rellenan las grandes
+public int calculaBotellasPequenas(int pequenas, int grandes, int total) {
+//
+}
+}
+
+2. Parámetros: int pequeñas, int grandes, int total
+
+3. Caracterizaciones para los tres parámetros
+        - Q1: positivos
+        - Q2: 0
+        - Q3: negativo
+

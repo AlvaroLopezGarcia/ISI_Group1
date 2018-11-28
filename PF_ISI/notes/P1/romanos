@@ -1,0 +1,12 @@
+1. // Ver https://es.wikipedia.org/wiki/Numeraci%C3%B3n_romana
+public class RomanNumeral {
+// Parámetro: s es un número romano.
+// Devuelve : s en base 10
+//
+No se especifica qué ocurre si el número no es romano
+public int convierte(String s) {
+//
+}
+}
+
+2. parámetro: String s

@@ -1,0 +1,8 @@
+Despues de comprobar todos los caminos posibles con nuestro test
+obtenemos que no hay ningun error. Estan cubiertos todos los casos
+posibles.
+En cuanto a la implementacion de nuestro programa DescuentoBlackFriday.java,
+ya teniamos en cuenta el efecto de "dependecy injection" con un constructor.
+De todos modos, lo hemos cambiado a la solucion propuesta por el profesor,es decir,
+en vez de un constructor, un parametro de entrada con la fecha tanto en el programa
+como en los test.

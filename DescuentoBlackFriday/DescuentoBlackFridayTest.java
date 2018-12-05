@@ -20,27 +20,32 @@ public class DescuentoBlackFridayTest
     @SuppressWarnings ("unchecked")
 	public void testprecionegativo()
 	{
-		precio.PrecioFinal(-5.0);
+        DateTimeFormatter f = DateTimeFormatter.ofPattern("yyyy-dd-MM");
+        LocalDate fecha = LocalDate.parse("1914-24-11",f);
+		precio.PrecioFinal(-5.0,fecha);
 	}
 
 	@Test public void testlimitesuperior()
 	{
 		double valor = 15.2;
-		precio.fecha = LocalDate.parse("1914-24-11",precio.f);
-		assertTrue("El total es 15.2", valor == precio.PrecioFinal(valor));
+        DateTimeFormatter f = DateTimeFormatter.ofPattern("yyyy-dd-MM");
+		LocalDate fecha = LocalDate.parse("1914-24-11",f);
+		assertTrue("El total es 15.2", valor == precio.PrecioFinal(valor, fecha));
 	}
 
 	@Test public void testlimiteinferior()
 	{
 		double valor = 15.2;
-		precio.fecha = LocalDate.parse("1914-22-11",precio.f);
-		assertTrue("El total es 15.2", valor == precio.PrecioFinal(valor));
+        DateTimeFormatter f = DateTimeFormatter.ofPattern("yyyy-dd-MM");
+		LocalDate fecha = LocalDate.parse("1914-22-11",f);
+		assertTrue("El total es 15.2", valor == precio.PrecioFinal(valor,fecha));
 	}
 
 	@Test public void testcorrectofunc()
 	{
 		double valor = 15.2;
-		precio.fecha = LocalDate.parse("1954-23-11",precio.f);
-		assertTrue("El total es 15.2", 0.7*valor == precio.PrecioFinal(valor));
+        DateTimeFormatter f = DateTimeFormatter.ofPattern("yyyy-dd-MM");
+		LocalDate fecha = LocalDate.parse("1954-23-11",f);
+		assertTrue("El total es 15.2", 0.7*valor == precio.PrecioFinal(valor,fecha));
 	}
-}		
+}

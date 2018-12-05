@@ -26,7 +26,7 @@ public class BisiestoTest
     @SuppressWarnings ("unchecked")
     public void testAnyoNegativo()
 	{
-		assertTrue("Es bisiesto -400", false == anyo.EsBisiesto(-400));
+		anyo.EsBisiesto(-400);
 	}
 
 	@Test public void testAnyoCien()

@@ -22,9 +22,11 @@ public class BisiestoTest
 		assertTrue("Es bisiesto 1", false == anyo.EsBisiesto(1));
 	}
 
-	@Test public void testAnyoNegativo()
+	@Test(expected = IllegalArgumentException.class)
+    @SuppressWarnings ("unchecked")
+    public void testAnyoNegativo()
 	{
-		assertTrue("Es bisiesto -1", false == anyo.EsBisiesto(-1));
+		assertTrue("Es bisiesto -400", false == anyo.EsBisiesto(-400));
 	}
 
 	@Test public void testAnyoCien()

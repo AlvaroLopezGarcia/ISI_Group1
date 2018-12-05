@@ -1,0 +1,5 @@
+Después de comprobar los test para cada camino nos hemos dado cuenta que
+nuestro programa no controlaba correctamente la entra de numeros negativos.
+Para ello hemos modificado en BisiestoTest.java eltestAnyoNegativo()
+para anyo= -400 y lo hemos controlado con la exception IllegalArgumentException tanto
+en BisiestoTest.java como en Bisiesto.java.

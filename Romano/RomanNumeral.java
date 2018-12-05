@@ -8,18 +8,21 @@ public class RomanNumeral
    		int resultado = 0;
    		char letra = ' ';
    		int cont = 0;
+   	int encontrado = 0;
 
 		if (s == null){
 			throw new NullPointerException("RomanNumeral.convierte");
 		}
 		for(int i = 0; i < s.length(); i++){//RECORRER TODA LA FRASE(numero romano)
-
+			encontrado = 0;
 			letra = s.charAt(i);
 			
 			for(int j = 0; j < Rom.length; j++){//RECORRE ARREGLO ROM
 				if(letra == Rom[j]){//si letra recorrida = a letra contenida en rom                 
 					cont ++;
 					resultado = resultado + valor [j]; //sumar el valor de la letra
+					
+					encontrado = 1;
 				
 					if(ant < valor[j]){ //si el valor de letra anterior menor a valor letra   //actual
 						resultado = resultado - ant*2 ; // restale el doble del menor de los dos
@@ -35,9 +38,10 @@ public class RomanNumeral
 						
 						ant = valor[j];//el dato actual se guarda en anterior
 					}
-				}else{
-					throw new ClassCastException("RomanNumeral.convierte");// Si la letra no es una letra romana.
 				}
+			}
+			if (encontrado == 0){
+				throw new ClassCastException("RomanNumeral.convierte");// Si la letra no es una letra romana.
 			}
 		}
 		return resultado;

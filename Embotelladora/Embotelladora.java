@@ -2,7 +2,6 @@ public class Embotelladora
 {
 	public int calcBotellasPequenyas(int pequenyas,int grandes,int total)
 	{
-		int modulo;
 		int max_grandes;
 		int max_pequenyas;
 
@@ -10,10 +9,6 @@ public class Embotelladora
 			throw new ClassCastException("Embotelladora.calcBotellasPequenyas");
 		}
 		if(pequenyas == 0 || total == 0){
-			return 0;
-		}
-		modulo = total%5;
-		if(modulo == 0){
 			return 0;
 		}
 		max_grandes = total/5;

@@ -1,0 +1,1 @@
+Al realizar el prime path he descubierto tres posibles caminos que no habia controlado con mis test, añadiendo tres nuevos test ya si controlo todos los posibles errores. Al realizar los test descubro que mi programa tiene un fallo, el camino del nodo 5 al 4 no debería de existir (elimino ese if de mi código).

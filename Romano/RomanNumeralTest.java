@@ -95,4 +95,10 @@ public class RomanNumeralTest
       number.convierte (word);
    }
    
+   @Test
+	public void testHappyPath(){
+		RomanNumeral num = new RomanNumeral();
+		assertTrue("Happy path", 1467 == num.convierte("MCDLXVII"));
+	}
+   
 }

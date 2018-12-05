@@ -1,0 +1,1 @@
+Realizando los prime paths del código de Romanos me he dado cuenta de que había un bug y el bug era que siempre elevaba la excepción cuando el primer char no era el mismo que el char del array de Rom y además he realizado el último test porque no pasaba por todos los prime paths.

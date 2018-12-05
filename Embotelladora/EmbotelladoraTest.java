@@ -64,4 +64,19 @@ public class EmbotelladoraTest
 		assertTrue("El total es 1", 1 == litros.calcBotellasPequenyas(5,2,11));
 	}
 
+	@Test public void testmoduloCero()
+	{
+		assertTrue("El total es 0", 0 == litros.calcBotellasPequenyas(5,3,20));
+	}
+
+	@Test public void testfaltapequenya()
+	{
+		assertTrue("El total es 1", 1 == litros.calcBotellasPequenyas(1,2,9));
+	}
+
+	@Test public void testfaltagrande()
+	{
+		assertTrue("El total es 6", 6 == litros.calcBotellasPequenyas(7,2,16));
+	}
+
 }
